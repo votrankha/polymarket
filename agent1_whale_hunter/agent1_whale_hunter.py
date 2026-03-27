@@ -207,6 +207,7 @@ class TrackedWalletsDB:
                 entry.get('account_age_days'),
                 entry.get('total_volume'),
                 entry.get('market_count', 0),
+                entry.get('high_price_entry_ratio', 0.0),
                 1 if entry.get('bot_flag') else 0,
                 1 if entry.get('specialist') else 0,
                 now,  # update ts to now
@@ -218,8 +219,9 @@ class TrackedWalletsDB:
             self._cursor.execute('''
                 INSERT INTO wallet_snapshots 
                 (address, ts, score, win_rate, kelly, net_pnl, avg_size, total_closed,
-                 trades_per_month, account_age_days, total_volume, market_count, bot_flag, specialist, source)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                 trades_per_month, account_age_days, total_volume, market_count, 
+                 high_price_entry_ratio, bot_flag, specialist, source)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
                 addr,
                 now,
@@ -233,6 +235,7 @@ class TrackedWalletsDB:
                 entry.get('account_age_days'),
                 entry.get('total_volume'),
                 entry.get('market_count', 0),
+                entry.get('high_price_entry_ratio', 0.0),
                 1 if entry.get('bot_flag') else 0,
                 1 if entry.get('specialist') else 0,
                 entry.get('source', 'scan')
@@ -270,7 +273,8 @@ class TrackedWalletsDB:
         # Map row to dict (must match table schema exactly)
         columns = ['id', 'address', 'ts', 'score', 'win_rate', 'kelly', 'net_pnl',
                    'avg_size', 'total_closed', 'trades_per_month', 'account_age_days',
-                   'total_volume', 'market_count', 'bot_flag', 'specialist', 'source']
+                   'total_volume', 'market_count', 'high_price_entry_ratio',
+                   'bot_flag', 'specialist', 'source']
         return dict(zip(columns, row))
 
     def all(self) -> List[dict]:
