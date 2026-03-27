@@ -1,0 +1,47 @@
+# Environment & Secrets
+.env
+.env.*
+*.env
+secrets/
+credentials.json
+*.pem
+*.key
+
+# Database & WAL
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+# Logs
+*.log
+logs/
+shared/agent1.log
+shared/agent2.log
+shared/watchdog.log
+
+# Python cache
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Temporary / Data
+shared/db/
+shared/copy_queue.jsonl
+shared/.queue_cursor
+analysis/simulations/filler_rules_summary_*.json
+analysis/reports/agent1_performance_*.json
+market_research/YYYY-MM-DD.md
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Project-specific excludes
+shared/wallet.md
+analysis/research/mina_whale_candidates_*.md
+memory/

@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-03-14T07:17:33.837775",
+  "specialist_count": 5,
+  "total_positions": 27,
+  "wins": 22,
+  "losses": 5,
+  "win_rate_pct": 81.48148148148148,
+  "avg_win_usdc": 63.60809938236753,
+  "avg_loss_usdc": 0.012265667493240987,
+  "win_loss_ratio": 5185.865295746755,
+  "total_budget_usdc": 1000.0,
+  "total_pnl_usdc": 1399.3168580746196,
+  "roi_pct": 139.93168580746195,
+  "max_drawdown_pct": 0.006132833746620493,
+  "proceed_to_real": true,
+  "specialist_details": [
+    {
+      "address": "0x4a49ce5fe2d6faadbc0b279c4d2bd5f41665285e",
+      "closed_positions": 1,
+      "estimated_total_capital": 2369166.9747,
+      "scaling_factor": 8.441785747301553e-05,
+      "raw_pnl": 611184.472,
+      "scaled_pnl": 51.594883647016246,
+      "win_rate": 100.0,
+      "kelly": 1.0,
+      "budget": 200.0
+    },
+    {
+      "address": "0x94f199fb7789f1aef7fff6b758d6b375100f4c7a",
+      "closed_positions": 11,
+      "estimated_total_capital": 1868417.0485,
+      "scaling_factor": 0.00010704248291919821,
+      "raw_pnl": 6870787.1448,
+      "scaled_pnl": 735.4661155887006,
+      "win_rate": 100.0,
+      "kelly": 1.0,
+      "budget": 200.0
+    },
+    {
+      "address": "0x019782cab5d844f02bafb71f512758be78579f3c",
+      "closed_positions": 3,
+      "estimated_total_capital": 2638155.6525,
+      "scaling_factor": 7.581053824874726e-05,
+      "raw_pnl": 3668541.5810999996,
+      "scaled_pnl": 278.11411185110126,
+      "win_rate": 100.0,
+      "kelly": 1.0,
+      "budget": 200.0
+    },
+    {
+      "address": "0x25e64cd559e8c46a888d8ebfa47d4490e810cc9f",
+      "closed_positions": 12,
+      "estimated_total_capital": 1071807.9556,
+      "scaling_factor": 0.00018660059290942624,
+      "raw_pnl": 624754.2801,
+      "scaled_pnl": 116.57951908936175,
+      "win_rate": 50.0,
+      "kelly": 0.49968452730504376,
+      "budget": 200.0
+    },
+    {
+      "address": "0x8453f6aa62cba5e5302f501849ffaf83dff2ecc3",
+      "closed_positions": 1,
+      "estimated_total_capital": 786350.8286,
+      "scaling_factor": 0.00025433940262525716,
+      "raw_pnl": 855401.1909,
+      "scaled_pnl": 217.56222789843957,
+      "win_rate": 100.0,
+      "kelly": 1.0,
+      "budget": 200.0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Polymarket 2-Agent Bot — Python Dependencies
+
+# HTTP + WebSocket async client
+aiohttp>=3.9.0
+
+# Ethereum / Polygon
+web3>=6.0.0
+eth-account>=0.10.0
+
+# Environment config
+python-dotenv>=1.0.0
+
+# Terminal colors
+colorama>=0.4.6

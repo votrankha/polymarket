@@ -1,0 +1,1802 @@
+[
+  {
+    "address": "0x0006af12cd4dacc450836a0e1ec6ce47365d8c63",
+    "n_trades": 225,
+    "age_days": 4,
+    "n_closed": 500,
+    "volume": 51853.4437,
+    "mkt_cnt": 68,
+    "trades_per_month": 225.0
+  },
+  {
+    "address": "0x00090e8b4fa8f88dc9c1740e460dd0f670021d43",
+    "n_trades": 445,
+    "age_days": 20,
+    "n_closed": 140,
+    "volume": 314451.6334,
+    "mkt_cnt": 35,
+    "trades_per_month": 445.0
+  },
+  {
+    "address": "0x000cf5ff974a0a3d0134a45c46a7379db75940ef",
+    "n_trades": 8,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 17391.0428,
+    "mkt_cnt": 7,
+    "trades_per_month": 1.9834710743801653
+  },
+  {
+    "address": "0x000d257d2dc7616feaef4ae0f14600fdf50a758e",
+    "n_trades": 520,
+    "age_days": 14,
+    "n_closed": 501,
+    "volume": 1255230.0718,
+    "mkt_cnt": 52,
+    "trades_per_month": 520.0
+  },
+  {
+    "address": "0x0015c5a76490d303e837d79dd5cf6a3825e4d5b0",
+    "n_trades": 447,
+    "age_days": 2,
+    "n_closed": 500,
+    "volume": 52117.4307,
+    "mkt_cnt": 17,
+    "trades_per_month": 447.0
+  },
+  {
+    "address": "0x006c3fe345d80d4fc5a1381bacc1475c6640c956",
+    "n_trades": 2,
+    "age_days": 41,
+    "n_closed": 0,
+    "volume": 16688.3389,
+    "mkt_cnt": 2,
+    "trades_per_month": 1.4634146341463414
+  },
+  {
+    "address": "0x006cc834cc092684f1b56626e23bedb3835c16ea",
+    "n_trades": 404,
+    "age_days": 60,
+    "n_closed": 500,
+    "volume": 7687732.2545,
+    "mkt_cnt": 72,
+    "trades_per_month": 202.0
+  },
+  {
+    "address": "0x00726335905c5422b464e962b851208a3c633d75",
+    "n_trades": 818,
+    "age_days": 10,
+    "n_closed": 260,
+    "volume": 308608.0199,
+    "mkt_cnt": 112,
+    "trades_per_month": 818.0
+  },
+  {
+    "address": "0x0075e94fde5e1f89e659028234002f428b25eb1a",
+    "n_trades": 18,
+    "age_days": 18,
+    "n_closed": 2,
+    "volume": 87671.0438,
+    "mkt_cnt": 5,
+    "trades_per_month": 18.0
+  },
+  {
+    "address": "0x00d48febb4c6d1b91c80e4baafd7bf4bd2b50a1b",
+    "n_trades": 52,
+    "age_days": 34,
+    "n_closed": 19,
+    "volume": 181774.5325,
+    "mkt_cnt": 35,
+    "trades_per_month": 45.88235294117647
+  },
+  {
+    "address": "0x00d5f82b59c8b8e72684bca5a3b50eee3db6ed84",
+    "n_trades": 350,
+    "age_days": 9,
+    "n_closed": 92,
+    "volume": 141374.1794,
+    "mkt_cnt": 23,
+    "trades_per_month": 350.0
+  },
+  {
+    "address": "0x014c4e7ae2145992861c2d1b124af633a97f820c",
+    "n_trades": 596,
+    "age_days": 18,
+    "n_closed": 171,
+    "volume": 887313.9402,
+    "mkt_cnt": 107,
+    "trades_per_month": 596.0
+  },
+  {
+    "address": "0x016c93b90a1630bc7f6754038c1b9f9ff35e57cd",
+    "n_trades": 85,
+    "age_days": 269,
+    "n_closed": 31,
+    "volume": 301931.1339,
+    "mkt_cnt": 34,
+    "trades_per_month": 9.479553903345725
+  },
+  {
+    "address": "0x019782cab5d844f02bafb71f512758be78579f3c",
+    "n_trades": 349,
+    "age_days": 17,
+    "n_closed": 3,
+    "volume": 2638155.6525,
+    "mkt_cnt": 1,
+    "trades_per_month": 349.0
+  },
+  {
+    "address": "0x01baeccca6daf3d1ed2b562007f1f9e7ef9cb77a",
+    "n_trades": 469,
+    "age_days": 46,
+    "n_closed": 209,
+    "volume": 938519.9306,
+    "mkt_cnt": 44,
+    "trades_per_month": 305.8695652173913
+  },
+  {
+    "address": "0x01c7ae3322fca224236776155ca7916b7d4558bb",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 36278.8698,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0202836f51d5e69f44d1fc2c70a5d552d2ce9584",
+    "n_trades": 5,
+    "age_days": 38,
+    "n_closed": 2,
+    "volume": 30895.7171,
+    "mkt_cnt": 3,
+    "trades_per_month": 3.947368421052632
+  },
+  {
+    "address": "0x021bb287ff8e2c268e8c09b70f3e5af39e182e1f",
+    "n_trades": 10,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 37396.6813,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.479338842975207
+  },
+  {
+    "address": "0x0260366a9add43c25d4f4d35d2210526c6750d88",
+    "n_trades": 463,
+    "age_days": 25,
+    "n_closed": 281,
+    "volume": 497110.2584,
+    "mkt_cnt": 17,
+    "trades_per_month": 463.0
+  },
+  {
+    "address": "0x0291319bba80b2ee6b4e6b1ce01bf8d432463c48",
+    "n_trades": 15,
+    "age_days": 457,
+    "n_closed": 9,
+    "volume": 22359.1636,
+    "mkt_cnt": 10,
+    "trades_per_month": 0.9846827133479212
+  },
+  {
+    "address": "0x02d5f92b780ec7c98d7ad0624ff017f7ae4688c7",
+    "n_trades": 456,
+    "age_days": 230,
+    "n_closed": 24,
+    "volume": 647552.4978,
+    "mkt_cnt": 3,
+    "trades_per_month": 59.47826086956522
+  },
+  {
+    "address": "0x02d8495225a297157d25dbcf7ed9dd483bf80c91",
+    "n_trades": 436,
+    "age_days": 51,
+    "n_closed": 36,
+    "volume": 256590.7016,
+    "mkt_cnt": 30,
+    "trades_per_month": 256.47058823529414
+  },
+  {
+    "address": "0x031d98aa60916870a6b90ad5bd635ec5936277e1",
+    "n_trades": 17,
+    "age_days": 26,
+    "n_closed": 8,
+    "volume": 108349.23939999999,
+    "mkt_cnt": 11,
+    "trades_per_month": 17.0
+  },
+  {
+    "address": "0x033a07b3de5947eab4306676ad74eb546da30d50",
+    "n_trades": 282,
+    "age_days": 501,
+    "n_closed": 3,
+    "volume": 3073889.8416999998,
+    "mkt_cnt": 1,
+    "trades_per_month": 16.88622754491018
+  },
+  {
+    "address": "0x033d15401b4a4f77ae2beca5702d4ceb29605ea6",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 7,
+    "volume": 34986.4444,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x034b55d23788bdcdc4c8bbe38c0d8c9526ecb22b",
+    "n_trades": 94,
+    "age_days": 50,
+    "n_closed": 45,
+    "volume": 148976.0833,
+    "mkt_cnt": 64,
+    "trades_per_month": 56.4
+  },
+  {
+    "address": "0x036c159d5a348058a81066a76b89f35926d4178d",
+    "n_trades": 711,
+    "age_days": 6,
+    "n_closed": 87,
+    "volume": 252913.7192,
+    "mkt_cnt": 21,
+    "trades_per_month": 711.0
+  },
+  {
+    "address": "0x037262625c394c113623eeb91c4ad20cf2c95986",
+    "n_trades": 8,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 17928.431800000002,
+    "mkt_cnt": 7,
+    "trades_per_month": 1.9834710743801653
+  },
+  {
+    "address": "0x03aaf3f6ab284dba5a6494c201122472a44e7d3d",
+    "n_trades": 9,
+    "age_days": 3,
+    "n_closed": 3,
+    "volume": 35623.239499999996,
+    "mkt_cnt": 4,
+    "trades_per_month": 9.0
+  },
+  {
+    "address": "0x03bf69a43439efcf9656263b45cd069021dde1fb",
+    "n_trades": 9,
+    "age_days": 120,
+    "n_closed": 6,
+    "volume": 34395.8728,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.25
+  },
+  {
+    "address": "0x03e8a544e97eeff5753bc1e90d46e5ef22af1697",
+    "n_trades": 2259,
+    "age_days": 6,
+    "n_closed": 287,
+    "volume": 1592323.7866,
+    "mkt_cnt": 36,
+    "trades_per_month": 2259.0
+  },
+  {
+    "address": "0x041fc9dbf8d5b6ad39b25ac3c3aff4bdc8f4fd1b",
+    "n_trades": 41,
+    "age_days": 469,
+    "n_closed": 16,
+    "volume": 194559.5197,
+    "mkt_cnt": 17,
+    "trades_per_month": 2.6226012793176974
+  },
+  {
+    "address": "0x0457df1bf6ee5b4f260b4341ace02100b2c94403",
+    "n_trades": 452,
+    "age_days": 43,
+    "n_closed": 118,
+    "volume": 196147.5741,
+    "mkt_cnt": 103,
+    "trades_per_month": 315.3488372093023
+  },
+  {
+    "address": "0x046b564a2855f8c3935b258c6b33ddaa5111340d",
+    "n_trades": 106,
+    "age_days": 18,
+    "n_closed": 37,
+    "volume": 127698.4939,
+    "mkt_cnt": 52,
+    "trades_per_month": 106.0
+  },
+  {
+    "address": "0x047b41c5ade91d5b4a375789df7da28fff06ba92",
+    "n_trades": 10,
+    "age_days": 120,
+    "n_closed": 6,
+    "volume": 36617.7435,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.5
+  },
+  {
+    "address": "0x04e47a84766b137457b4c0fb0ba39f3492c4977a",
+    "n_trades": 8,
+    "age_days": 120,
+    "n_closed": 5,
+    "volume": 17937.395200000003,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.0
+  },
+  {
+    "address": "0x04fc47f282f7ebbaafa849e787f81b43a6720e31",
+    "n_trades": 488,
+    "age_days": 30,
+    "n_closed": 134,
+    "volume": 930275.7707,
+    "mkt_cnt": 36,
+    "trades_per_month": 488.0
+  },
+  {
+    "address": "0x051b16ffac0f10a8df96b93cc03facce011ea5e5",
+    "n_trades": 20,
+    "age_days": 503,
+    "n_closed": 1,
+    "volume": 1999472.0,
+    "mkt_cnt": 1,
+    "trades_per_month": 1.1928429423459246
+  },
+  {
+    "address": "0x052f4191cd324a348835a846d34df5b0061e53fb",
+    "n_trades": 801,
+    "age_days": 13,
+    "n_closed": 93,
+    "volume": 829636.76,
+    "mkt_cnt": 38,
+    "trades_per_month": 801.0
+  },
+  {
+    "address": "0x05396bcdebfec94646479942fe444c87241964e0",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 36094.7345,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0562c423912e325f83fa79df55085979e1f5594f",
+    "n_trades": 474,
+    "age_days": 503,
+    "n_closed": 19,
+    "volume": 30541.2416,
+    "mkt_cnt": 17,
+    "trades_per_month": 28.270377733598412
+  },
+  {
+    "address": "0x05670a9813243e7a5af6ffa2aa013b4960fd2c55",
+    "n_trades": 179,
+    "age_days": 524,
+    "n_closed": 13,
+    "volume": 194824.3057,
+    "mkt_cnt": 15,
+    "trades_per_month": 10.248091603053435
+  },
+  {
+    "address": "0x0573b1fc54b4acb659f4403442be6fdf34b45f76",
+    "n_trades": 432,
+    "age_days": 79,
+    "n_closed": 6,
+    "volume": 627927.4929000001,
+    "mkt_cnt": 8,
+    "trades_per_month": 164.0506329113924
+  },
+  {
+    "address": "0x05b21f43e056cdf3f26ae5f28dc0238495e2a469",
+    "n_trades": 356,
+    "age_days": 13,
+    "n_closed": 149,
+    "volume": 615362.7865,
+    "mkt_cnt": 10,
+    "trades_per_month": 356.0
+  },
+  {
+    "address": "0x05c4a277c894f7dc84e6ad49c9423a562537a4f2",
+    "n_trades": 424,
+    "age_days": 6,
+    "n_closed": 72,
+    "volume": 141278.1734,
+    "mkt_cnt": 26,
+    "trades_per_month": 424.0
+  },
+  {
+    "address": "0x05c4d6c877616a00a02080471c6dfb831f70003f",
+    "n_trades": 11,
+    "age_days": 4,
+    "n_closed": 0,
+    "volume": 50448.0238,
+    "mkt_cnt": 1,
+    "trades_per_month": 11.0
+  },
+  {
+    "address": "0x05e70727a2e2dcd079baa2ef1c0b88af06bb9641",
+    "n_trades": 25,
+    "age_days": 27,
+    "n_closed": 9,
+    "volume": 167318.2446,
+    "mkt_cnt": 23,
+    "trades_per_month": 25.0
+  },
+  {
+    "address": "0x05f6027ceb5b8db472bb716d3ed574c199118cec",
+    "n_trades": 45,
+    "age_days": 14,
+    "n_closed": 3,
+    "volume": 949482.0118,
+    "mkt_cnt": 7,
+    "trades_per_month": 45.0
+  },
+  {
+    "address": "0x067f7f6e3d5363f1cf962499d1be2ca6de8be041",
+    "n_trades": 844,
+    "age_days": 2,
+    "n_closed": 519,
+    "volume": 161407.9445,
+    "mkt_cnt": 26,
+    "trades_per_month": 844.0
+  },
+  {
+    "address": "0x06c0d07d5b59b25316bf1e6007aca6ad8f20bc23",
+    "n_trades": 1333,
+    "age_days": 10,
+    "n_closed": 580,
+    "volume": 1884970.3952,
+    "mkt_cnt": 28,
+    "trades_per_month": 1333.0
+  },
+  {
+    "address": "0x06d00e6307b288427c8e32e146b602e1a58a254f",
+    "n_trades": 489,
+    "age_days": 246,
+    "n_closed": 92,
+    "volume": 180448.9041,
+    "mkt_cnt": 63,
+    "trades_per_month": 59.63414634146342
+  },
+  {
+    "address": "0x071b57ed356a443f0cee608b2629b6cfa63243e7",
+    "n_trades": 45,
+    "age_days": 74,
+    "n_closed": 20,
+    "volume": 72812.5336,
+    "mkt_cnt": 24,
+    "trades_per_month": 18.243243243243242
+  },
+  {
+    "address": "0x073a1caba3c22e9e361ceae83aaa5405706f91e7",
+    "n_trades": 998,
+    "age_days": 1,
+    "n_closed": 46,
+    "volume": 68637.5036,
+    "mkt_cnt": 5,
+    "trades_per_month": 998.0
+  },
+  {
+    "address": "0x073acf8ae292e51563cdb26a52e9b0c2a15e8e8b",
+    "n_trades": 37,
+    "age_days": 5,
+    "n_closed": 3,
+    "volume": 627984.6304,
+    "mkt_cnt": 8,
+    "trades_per_month": 37.0
+  },
+  {
+    "address": "0x0764a6f5e2f3c62bd3686c50b0b0b95279f1e01f",
+    "n_trades": 457,
+    "age_days": 199,
+    "n_closed": 62,
+    "volume": 484637.652,
+    "mkt_cnt": 10,
+    "trades_per_month": 68.89447236180904
+  },
+  {
+    "address": "0x07887c538817a4f5b3901b7cde294e95fa655c76",
+    "n_trades": 3,
+    "age_days": 42,
+    "n_closed": 1,
+    "volume": 15546.7208,
+    "mkt_cnt": 2,
+    "trades_per_month": 2.142857142857143
+  },
+  {
+    "address": "0x07921379f7b31ef93da634b688b2fe36897db778",
+    "n_trades": 601,
+    "age_days": 10,
+    "n_closed": 21,
+    "volume": 425510.1452,
+    "mkt_cnt": 17,
+    "trades_per_month": 601.0
+  },
+  {
+    "address": "0x079ac0da00e470c729fd224aecbcddfa4dbc8884",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 35255.7167,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x079e15961cbf026546d8068aed05121815ec8254",
+    "n_trades": 342,
+    "age_days": 31,
+    "n_closed": 34,
+    "volume": 372424.60480000003,
+    "mkt_cnt": 26,
+    "trades_per_month": 330.96774193548384
+  },
+  {
+    "address": "0x07a0185e728c95177539009164dd233790fe302d",
+    "n_trades": 5,
+    "age_days": 45,
+    "n_closed": 2,
+    "volume": 29730.0611,
+    "mkt_cnt": 3,
+    "trades_per_month": 3.3333333333333335
+  },
+  {
+    "address": "0x07b8e44b90cc3e91b8d5fe60ea810d2534638e25",
+    "n_trades": 1834,
+    "age_days": 7,
+    "n_closed": 522,
+    "volume": 1578173.9632,
+    "mkt_cnt": 44,
+    "trades_per_month": 1834.0
+  },
+  {
+    "address": "0x07bdcabf60da99be8fad11092bf4e8412cffe993",
+    "n_trades": 545,
+    "age_days": 6,
+    "n_closed": 2,
+    "volume": 2101706.8771,
+    "mkt_cnt": 5,
+    "trades_per_month": 545.0
+  },
+  {
+    "address": "0x07d3d726f0732612444ab48a6966865d8e58cea0",
+    "n_trades": 2,
+    "age_days": 79,
+    "n_closed": 1,
+    "volume": 10544.677099999999,
+    "mkt_cnt": 2,
+    "trades_per_month": 0.759493670886076
+  },
+  {
+    "address": "0x07dee415bb9e5b408be5868f3316a755d438e15e",
+    "n_trades": 3,
+    "age_days": 42,
+    "n_closed": 1,
+    "volume": 16751.5648,
+    "mkt_cnt": 2,
+    "trades_per_month": 2.142857142857143
+  },
+  {
+    "address": "0x0811f7d3acca0ea34f34715db6c396329d39bb04",
+    "n_trades": 21,
+    "age_days": 455,
+    "n_closed": 10,
+    "volume": 26196.4435,
+    "mkt_cnt": 11,
+    "trades_per_month": 1.3846153846153846
+  },
+  {
+    "address": "0x081e14554b92ee3dc53a21bd5b01f306692ef76e",
+    "n_trades": 430,
+    "age_days": 3,
+    "n_closed": 499,
+    "volume": 275301.4267,
+    "mkt_cnt": 42,
+    "trades_per_month": 430.0
+  },
+  {
+    "address": "0x086934317f099d0279493b3f73a954ee896114f1",
+    "n_trades": 271,
+    "age_days": 92,
+    "n_closed": 6,
+    "volume": 1009077.2762,
+    "mkt_cnt": 7,
+    "trades_per_month": 88.3695652173913
+  },
+  {
+    "address": "0x08c59894c5e32f0e5406799e49a9a33f4b7643ed",
+    "n_trades": 499,
+    "age_days": 21,
+    "n_closed": 504,
+    "volume": 1253965.3811,
+    "mkt_cnt": 84,
+    "trades_per_month": 499.0
+  },
+  {
+    "address": "0x08eeb4826b817459bdd12ae425619f1c4f07d5ba",
+    "n_trades": 189,
+    "age_days": 43,
+    "n_closed": 30,
+    "volume": 176623.736,
+    "mkt_cnt": 29,
+    "trades_per_month": 131.86046511627907
+  },
+  {
+    "address": "0x09150056d7b579819ca03e6b7b404652ee91d08a",
+    "n_trades": 470,
+    "age_days": 74,
+    "n_closed": 500,
+    "volume": 204034.6575,
+    "mkt_cnt": 147,
+    "trades_per_month": 190.54054054054052
+  },
+  {
+    "address": "0x093c5c2954656c9639e73774fd4aa9f4540243f2",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 18213.6038,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0940a70f216e2fd077f4f01044c4152f05e13640",
+    "n_trades": 345,
+    "age_days": 93,
+    "n_closed": 148,
+    "volume": 583374.3077,
+    "mkt_cnt": 236,
+    "trades_per_month": 111.29032258064515
+  },
+  {
+    "address": "0x094e3e7c5486ca7f5efd45de09857b873c70f10b",
+    "n_trades": 493,
+    "age_days": 79,
+    "n_closed": 500,
+    "volume": 109979.1651,
+    "mkt_cnt": 105,
+    "trades_per_month": 187.21518987341773
+  },
+  {
+    "address": "0x0979bad57d7a1403db89cbcd9c52bf43f2138d9b",
+    "n_trades": 235,
+    "age_days": 452,
+    "n_closed": 81,
+    "volume": 3087781.9593,
+    "mkt_cnt": 115,
+    "trades_per_month": 15.597345132743364
+  },
+  {
+    "address": "0x09846a7127482f13be47da19e20d41a3debf96e1",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 17349.314,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x09e0f8230e615ce407d59df9c943fd46827ee546",
+    "n_trades": 753,
+    "age_days": 22,
+    "n_closed": 116,
+    "volume": 448784.8897,
+    "mkt_cnt": 45,
+    "trades_per_month": 753.0
+  },
+  {
+    "address": "0x09f54a92d77a36d00267620ef0ca9ed597826862",
+    "n_trades": 2,
+    "age_days": 79,
+    "n_closed": 1,
+    "volume": 10584.541799999999,
+    "mkt_cnt": 2,
+    "trades_per_month": 0.759493670886076
+  },
+  {
+    "address": "0x0a0835a2d0f30f8c98c709d78f50dd0643d83638",
+    "n_trades": 14,
+    "age_days": 138,
+    "n_closed": 10,
+    "volume": 16688.7795,
+    "mkt_cnt": 11,
+    "trades_per_month": 3.0434782608695654
+  },
+  {
+    "address": "0x0a4d2a4d3ed984027562c2ff163fbde020b1ce2c",
+    "n_trades": 318,
+    "age_days": 4,
+    "n_closed": 497,
+    "volume": 88074.6029,
+    "mkt_cnt": 7,
+    "trades_per_month": 318.0
+  },
+  {
+    "address": "0x0a6356d95e871f7288063d56a2db518ea004fc03",
+    "n_trades": 468,
+    "age_days": 10,
+    "n_closed": 247,
+    "volume": 119947.2159,
+    "mkt_cnt": 48,
+    "trades_per_month": 468.0
+  },
+  {
+    "address": "0x0a8449205f9688f43055cbf184701382a652ffbb",
+    "n_trades": 62,
+    "age_days": 42,
+    "n_closed": 13,
+    "volume": 237679.7878,
+    "mkt_cnt": 27,
+    "trades_per_month": 44.28571428571429
+  },
+  {
+    "address": "0x0a854897a06d4999e5b2dde5693609f1428ffe9d",
+    "n_trades": 487,
+    "age_days": 82,
+    "n_closed": 90,
+    "volume": 1292794.9575,
+    "mkt_cnt": 27,
+    "trades_per_month": 178.17073170731706
+  },
+  {
+    "address": "0x0aa3744338ddf9f39fb3a80bc9c916179d0b64e9",
+    "n_trades": 479,
+    "age_days": 18,
+    "n_closed": 499,
+    "volume": 447115.5258,
+    "mkt_cnt": 67,
+    "trades_per_month": 479.0
+  },
+  {
+    "address": "0x0aae5c4ec45339a64a1dd2fe4ba98c2a19eb251c",
+    "n_trades": 501,
+    "age_days": 50,
+    "n_closed": 513,
+    "volume": 301016.7559,
+    "mkt_cnt": 34,
+    "trades_per_month": 300.59999999999997
+  },
+  {
+    "address": "0x0af037c59ede5b3b2a6625f23923057d8296d425",
+    "n_trades": 78,
+    "age_days": 17,
+    "n_closed": 6,
+    "volume": 858538.3177,
+    "mkt_cnt": 6,
+    "trades_per_month": 78.0
+  },
+  {
+    "address": "0x0b79ec091819b05dc86ff14a9b074e181654b400",
+    "n_trades": 164,
+    "age_days": 3,
+    "n_closed": 109,
+    "volume": 54317.8991,
+    "mkt_cnt": 13,
+    "trades_per_month": 164.0
+  },
+  {
+    "address": "0x0b9cae2b0dfe7a71c413e0604eaac1c352f87e44",
+    "n_trades": 1841,
+    "age_days": 6,
+    "n_closed": 637,
+    "volume": 1380504.4363,
+    "mkt_cnt": 100,
+    "trades_per_month": 1841.0
+  },
+  {
+    "address": "0x0bac69439e331e20d14d5e45fe639a705d94938a",
+    "n_trades": 3,
+    "age_days": 38,
+    "n_closed": 1,
+    "volume": 15848.5437,
+    "mkt_cnt": 2,
+    "trades_per_month": 2.368421052631579
+  },
+  {
+    "address": "0x0bc54ae737f00a324e8f41246d19377a052e3069",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 36215.593,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0be51fc6dc9e85f9ff81eca2f0a6fa0d986e0db3",
+    "n_trades": 349,
+    "age_days": 28,
+    "n_closed": 64,
+    "volume": 169191.0612,
+    "mkt_cnt": 56,
+    "trades_per_month": 349.0
+  },
+  {
+    "address": "0x0c0e270cf879583d6a0142fc817e05b768d0434e",
+    "n_trades": 1448,
+    "age_days": 5,
+    "n_closed": 509,
+    "volume": 59070.6147,
+    "mkt_cnt": 36,
+    "trades_per_month": 1448.0
+  },
+  {
+    "address": "0x0c1a1c63dd9322d76473b1a19dca654f6fdcdff2",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 34735.3457,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0c84d454825e9f42619497f6158b4753cd43a8ed",
+    "n_trades": 596,
+    "age_days": 12,
+    "n_closed": 192,
+    "volume": 537030.7032,
+    "mkt_cnt": 159,
+    "trades_per_month": 596.0
+  },
+  {
+    "address": "0x0c9eb97737c40b4dab9c3fe08ad5f7198233352a",
+    "n_trades": 453,
+    "age_days": 29,
+    "n_closed": 32,
+    "volume": 60289.3264,
+    "mkt_cnt": 16,
+    "trades_per_month": 453.0
+  },
+  {
+    "address": "0x0d2a1f34f9262905d864c94eccb72fd842a968fc",
+    "n_trades": 413,
+    "age_days": 133,
+    "n_closed": 75,
+    "volume": 148317.6887,
+    "mkt_cnt": 77,
+    "trades_per_month": 93.1578947368421
+  },
+  {
+    "address": "0x0d46fd6a5c9f3ecd88c69e397c3dcdc8f0b9e9a2",
+    "n_trades": 4,
+    "age_days": 8,
+    "n_closed": 0,
+    "volume": 22353.225000000002,
+    "mkt_cnt": 1,
+    "trades_per_month": 4.0
+  },
+  {
+    "address": "0x0d75e1d093ae1eb0b215dc8a17c1da1d76f3396f",
+    "n_trades": 495,
+    "age_days": 20,
+    "n_closed": 62,
+    "volume": 710708.4988000001,
+    "mkt_cnt": 52,
+    "trades_per_month": 495.0
+  },
+  {
+    "address": "0x0dc607c5b65025dcb443c10fdcbaed4256bb9889",
+    "n_trades": 234,
+    "age_days": 488,
+    "n_closed": 8,
+    "volume": 303451.302,
+    "mkt_cnt": 24,
+    "trades_per_month": 14.385245901639346
+  },
+  {
+    "address": "0x0dcf5b49627c5194805bd1af846fd0bd3388c556",
+    "n_trades": 455,
+    "age_days": 23,
+    "n_closed": 99,
+    "volume": 639380.7628,
+    "mkt_cnt": 53,
+    "trades_per_month": 455.0
+  },
+  {
+    "address": "0x0ddad6ff68fe24decb8df94f4ed10386cbceaa7f",
+    "n_trades": 8,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 18392.3209,
+    "mkt_cnt": 7,
+    "trades_per_month": 1.9834710743801653
+  },
+  {
+    "address": "0x0ddfd4f85fe7a11d67b9d692e719d2891270ab10",
+    "n_trades": 488,
+    "age_days": 2,
+    "n_closed": 10,
+    "volume": 39252.3557,
+    "mkt_cnt": 8,
+    "trades_per_month": 488.0
+  },
+  {
+    "address": "0x0df528705f459968e793d4ff6da44227a327e7c2",
+    "n_trades": 533,
+    "age_days": 35,
+    "n_closed": 172,
+    "volume": 420426.3759,
+    "mkt_cnt": 129,
+    "trades_per_month": 456.85714285714283
+  },
+  {
+    "address": "0x0e10e18ed0f862162f68272b639dfa4b71a913f9",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 36228.1374,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0e5bd76779e74304d08e759072abf126d87da593",
+    "n_trades": 444,
+    "age_days": 12,
+    "n_closed": 190,
+    "volume": 2686332.4972,
+    "mkt_cnt": 3,
+    "trades_per_month": 444.0
+  },
+  {
+    "address": "0x0e65d9e624a865cef86d06d15603cb382115ea61",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 7,
+    "volume": 35575.0395,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x0e6b84cb9831d5ca2bf88313d1a0b13402b0d96d",
+    "n_trades": 69,
+    "age_days": 15,
+    "n_closed": 14,
+    "volume": 392526.4637,
+    "mkt_cnt": 15,
+    "trades_per_month": 69.0
+  },
+  {
+    "address": "0x0e6ff34733140ef7a7ec00697782528cd666dfb9",
+    "n_trades": 464,
+    "age_days": 54,
+    "n_closed": 77,
+    "volume": 924843.3827,
+    "mkt_cnt": 32,
+    "trades_per_month": 257.77777777777777
+  },
+  {
+    "address": "0x0e94cabe1d7ef2cc621ae7788bb50a4880d5308c",
+    "n_trades": 15,
+    "age_days": 463,
+    "n_closed": 8,
+    "volume": 26133.596,
+    "mkt_cnt": 9,
+    "trades_per_month": 0.9719222462203023
+  },
+  {
+    "address": "0x0e9b9cb7ee710b57fbcbefdcb518a3a986a16e75",
+    "n_trades": 448,
+    "age_days": 497,
+    "n_closed": 173,
+    "volume": 556232.2444,
+    "mkt_cnt": 44,
+    "trades_per_month": 27.04225352112676
+  },
+  {
+    "address": "0x0ea574f3204c5c9c0cdead90392ea0990f4d17e4",
+    "n_trades": 201,
+    "age_days": 5,
+    "n_closed": 500,
+    "volume": 8108.7562,
+    "mkt_cnt": 17,
+    "trades_per_month": 201.0
+  },
+  {
+    "address": "0x0eb75bf6f54794a83bd26095811f30b530161f17",
+    "n_trades": 545,
+    "age_days": 25,
+    "n_closed": 188,
+    "volume": 1430208.6024,
+    "mkt_cnt": 208,
+    "trades_per_month": 545.0
+  },
+  {
+    "address": "0x0ef92d66ff18f4569b53c8a8374bb709e7041987",
+    "n_trades": 8,
+    "age_days": 120,
+    "n_closed": 5,
+    "volume": 17368.2022,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.0
+  },
+  {
+    "address": "0x0f042f6b551b9c1a147fade740ba7537ac4773d5",
+    "n_trades": 478,
+    "age_days": 10,
+    "n_closed": 102,
+    "volume": 126083.0496,
+    "mkt_cnt": 23,
+    "trades_per_month": 478.0
+  },
+  {
+    "address": "0x0f1eae5cf109dd3b6ef07fed36c80ec155c583ab",
+    "n_trades": 10,
+    "age_days": 120,
+    "n_closed": 6,
+    "volume": 36991.947199999995,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.5
+  },
+  {
+    "address": "0x0f673236eeb2e2c45d15b61c79d077c07299be72",
+    "n_trades": 117,
+    "age_days": 537,
+    "n_closed": 85,
+    "volume": 510958.4454,
+    "mkt_cnt": 88,
+    "trades_per_month": 6.5363128491620115
+  },
+  {
+    "address": "0x0f9aa00bf321ac3241cfe2f81c00486d610eabe3",
+    "n_trades": 8,
+    "age_days": 121,
+    "n_closed": 5,
+    "volume": 18209.3753,
+    "mkt_cnt": 6,
+    "trades_per_month": 1.9834710743801653
+  },
+  {
+    "address": "0x0f9fbc3efaf04030be65c485280966fca3d6f77b",
+    "n_trades": 21,
+    "age_days": 463,
+    "n_closed": 8,
+    "volume": 37593.1725,
+    "mkt_cnt": 9,
+    "trades_per_month": 1.3606911447084233
+  },
+  {
+    "address": "0x1002fd161ec5a591acb12157a0c947128b9b0fcf",
+    "n_trades": 1,
+    "age_days": 2,
+    "n_closed": 0,
+    "volume": 20118.33,
+    "mkt_cnt": 1,
+    "trades_per_month": 1.0
+  },
+  {
+    "address": "0x10191347192ddf2565240306260b3f0c44bb1f27",
+    "n_trades": 194,
+    "age_days": 113,
+    "n_closed": 159,
+    "volume": 173266.50819999998,
+    "mkt_cnt": 164,
+    "trades_per_month": 51.50442477876106
+  },
+  {
+    "address": "0x104171232971a6db8cf938f76fdbebbb81c5f452",
+    "n_trades": 494,
+    "age_days": 20,
+    "n_closed": 500,
+    "volume": 303706.4547,
+    "mkt_cnt": 162,
+    "trades_per_month": 494.0
+  },
+  {
+    "address": "0x1057e7d3ddafc60a4aeb10a2bc5b543792449ea5",
+    "n_trades": 495,
+    "age_days": 30,
+    "n_closed": 106,
+    "volume": 439763.2643,
+    "mkt_cnt": 51,
+    "trades_per_month": 495.0
+  },
+  {
+    "address": "0x1070ee77f3d191241ccc716d0f9c2654343c9124",
+    "n_trades": 482,
+    "age_days": 120,
+    "n_closed": 10,
+    "volume": 167885.1154,
+    "mkt_cnt": 20,
+    "trades_per_month": 120.5
+  },
+  {
+    "address": "0x10da5ff994371163a7a4a6a30939b998f6ed0670",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 35565.5184,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x10fbc3d2421e002f269089d15be6a56ce6ffc66c",
+    "n_trades": 533,
+    "age_days": 27,
+    "n_closed": 525,
+    "volume": 382149.652,
+    "mkt_cnt": 123,
+    "trades_per_month": 533.0
+  },
+  {
+    "address": "0x110df4cd9920084e1246ea66b07e036f5bc0cd01",
+    "n_trades": 491,
+    "age_days": 29,
+    "n_closed": 499,
+    "volume": 145735.0499,
+    "mkt_cnt": 183,
+    "trades_per_month": 491.0
+  },
+  {
+    "address": "0x1117eade222413335b7ec959e5b48c1d3dbc3532",
+    "n_trades": 810,
+    "age_days": 8,
+    "n_closed": 524,
+    "volume": 812265.0269,
+    "mkt_cnt": 92,
+    "trades_per_month": 810.0
+  },
+  {
+    "address": "0x113b6af5a1fea8ad79ca74c8e49205d805667afd",
+    "n_trades": 134,
+    "age_days": 47,
+    "n_closed": 15,
+    "volume": 19683.0135,
+    "mkt_cnt": 21,
+    "trades_per_month": 85.53191489361703
+  },
+  {
+    "address": "0x1196377379770db0f0dcb5d0b36606e74433672d",
+    "n_trades": 10,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 37285.349500000004,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.479338842975207
+  },
+  {
+    "address": "0x11c964cfd9ded9da47bf65a435d11eaeb0054aa4",
+    "n_trades": 2,
+    "age_days": 40,
+    "n_closed": 0,
+    "volume": 14491.014,
+    "mkt_cnt": 2,
+    "trades_per_month": 1.5
+  },
+  {
+    "address": "0x11d9ea5fdc6827e6c1421d557efb26105d6e19ee",
+    "n_trades": 10,
+    "age_days": 120,
+    "n_closed": 6,
+    "volume": 34695.825,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.5
+  },
+  {
+    "address": "0x11e5d9276b80c28d2167db68ae4cff6d8e09337e",
+    "n_trades": 502,
+    "age_days": 12,
+    "n_closed": 173,
+    "volume": 450756.2145,
+    "mkt_cnt": 91,
+    "trades_per_month": 502.0
+  },
+  {
+    "address": "0x1208610fc2df08bf6c50c253060908d752650cd5",
+    "n_trades": 9,
+    "age_days": 120,
+    "n_closed": 7,
+    "volume": 36668.9144,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.25
+  },
+  {
+    "address": "0x120e121c0cfa0fa967638fc1be8ab56eb6f25e91",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 5,
+    "volume": 34531.5362,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x12226b15662f2bb248b79b7b1f5fec25020d2aa7",
+    "n_trades": 396,
+    "age_days": 52,
+    "n_closed": 62,
+    "volume": 386305.067,
+    "mkt_cnt": 18,
+    "trades_per_month": 228.46153846153845
+  },
+  {
+    "address": "0x122cdd9db64fd8dc3ebab813218e3effe21f821f",
+    "n_trades": 533,
+    "age_days": 18,
+    "n_closed": 501,
+    "volume": 1164566.2137,
+    "mkt_cnt": 41,
+    "trades_per_month": 533.0
+  },
+  {
+    "address": "0x128a251f2300694ae6ea9d77e076ea8ea4e097c2",
+    "n_trades": 322,
+    "age_days": 603,
+    "n_closed": 3,
+    "volume": 497836.7919,
+    "mkt_cnt": 3,
+    "trades_per_month": 16.019900497512438
+  },
+  {
+    "address": "0x129a74a461309a9e4ebba1fa1403668c45cf9fb6",
+    "n_trades": 20,
+    "age_days": 1,
+    "n_closed": 0,
+    "volume": 36303.087700000004,
+    "mkt_cnt": 1,
+    "trades_per_month": 20.0
+  },
+  {
+    "address": "0x12afddef5bc473db74aa37b63a1119f34572ff78",
+    "n_trades": 462,
+    "age_days": 382,
+    "n_closed": 34,
+    "volume": 291929.6147,
+    "mkt_cnt": 43,
+    "trades_per_month": 36.282722513089006
+  },
+  {
+    "address": "0x12b9cabd49d13d56880ed5fe8ef8b6d67d583ec2",
+    "n_trades": 416,
+    "age_days": 9,
+    "n_closed": 500,
+    "volume": 120710.4668,
+    "mkt_cnt": 56,
+    "trades_per_month": 416.0
+  },
+  {
+    "address": "0x12c087ec351a039aba7962f075c6edb90e0e692b",
+    "n_trades": 403,
+    "age_days": 15,
+    "n_closed": 59,
+    "volume": 206730.6674,
+    "mkt_cnt": 20,
+    "trades_per_month": 403.0
+  },
+  {
+    "address": "0x12d6cccfc7470a3f4bafc53599a4779cbf2cf2a8",
+    "n_trades": 948,
+    "age_days": 5,
+    "n_closed": 515,
+    "volume": 193867.6033,
+    "mkt_cnt": 28,
+    "trades_per_month": 948.0
+  },
+  {
+    "address": "0x12d71e0473b4784889774072d80b885d05b32477",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 5,
+    "volume": 35802.8444,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x12ec6d71325afac2b4d25b3de94185e2c48d41ae",
+    "n_trades": 642,
+    "age_days": 8,
+    "n_closed": 181,
+    "volume": 445579.5287,
+    "mkt_cnt": 35,
+    "trades_per_month": 642.0
+  },
+  {
+    "address": "0x13414a77a4be48988851c73dfd824d0168e70853",
+    "n_trades": 1015,
+    "age_days": 6,
+    "n_closed": 511,
+    "volume": 406273.9068,
+    "mkt_cnt": 52,
+    "trades_per_month": 1015.0
+  },
+  {
+    "address": "0x135dfb2bdd7ab5c408b116fa41b1eb24dd52656b",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 18727.7323,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x137ddd24b2eab70baa1332386ffeaa82c0f1049d",
+    "n_trades": 2,
+    "age_days": 43,
+    "n_closed": 0,
+    "volume": 14951.1778,
+    "mkt_cnt": 2,
+    "trades_per_month": 1.3953488372093024
+  },
+  {
+    "address": "0x13b0a89849967847cf21b86e6eed4515c8eb0b43",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 5,
+    "volume": 37867.2436,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x141ef9052a46984e9d403100dc9c611d48388c87",
+    "n_trades": 477,
+    "age_days": 301,
+    "n_closed": 298,
+    "volume": 279944.4975,
+    "mkt_cnt": 89,
+    "trades_per_month": 47.541528239202655
+  },
+  {
+    "address": "0x142a66adf2e67c8cf3bbbc2d58db67c96ff9e606",
+    "n_trades": 3,
+    "age_days": 44,
+    "n_closed": 1,
+    "volume": 14945.7197,
+    "mkt_cnt": 2,
+    "trades_per_month": 2.0454545454545454
+  },
+  {
+    "address": "0x14333d20e95f39472970d2feff6c9c4c16fd56a0",
+    "n_trades": 463,
+    "age_days": 14,
+    "n_closed": 409,
+    "volume": 627560.3211000001,
+    "mkt_cnt": 81,
+    "trades_per_month": 463.0
+  },
+  {
+    "address": "0x1453e39f0a3c5a0804907378e30a92392c069972",
+    "n_trades": 17,
+    "age_days": 464,
+    "n_closed": 8,
+    "volume": 25064.897,
+    "mkt_cnt": 10,
+    "trades_per_month": 1.0991379310344827
+  },
+  {
+    "address": "0x1455445e9a775cfa3fe9fc4b02bb4d2f682ae5cd",
+    "n_trades": 1364,
+    "age_days": 6,
+    "n_closed": 760,
+    "volume": 1060768.9547,
+    "mkt_cnt": 269,
+    "trades_per_month": 1364.0
+  },
+  {
+    "address": "0x145c5dad6033a1de0930dc1ec9ae107fc61f43bc",
+    "n_trades": 403,
+    "age_days": 149,
+    "n_closed": 72,
+    "volume": 2734668.4295,
+    "mkt_cnt": 63,
+    "trades_per_month": 81.14093959731544
+  },
+  {
+    "address": "0x14619de097b1fbe058d6d36282662c20958a30a1",
+    "n_trades": 496,
+    "age_days": 11,
+    "n_closed": 500,
+    "volume": 190666.92309999999,
+    "mkt_cnt": 157,
+    "trades_per_month": 496.0
+  },
+  {
+    "address": "0x1465b79bff7992bc703e1aafb3683b1089647072",
+    "n_trades": 24,
+    "age_days": 9,
+    "n_closed": 0,
+    "volume": 51344.1716,
+    "mkt_cnt": 4,
+    "trades_per_month": 24.0
+  },
+  {
+    "address": "0x146703a8a73ae1dff0f84ba44c45d878858a4372",
+    "n_trades": 496,
+    "age_days": 75,
+    "n_closed": 514,
+    "volume": 1634360.5252,
+    "mkt_cnt": 312,
+    "trades_per_month": 198.4
+  },
+  {
+    "address": "0x14710e2938ad9a73e1d0f924e98c5e7e1d5f4233",
+    "n_trades": 9,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 35439.4148,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.231404958677686
+  },
+  {
+    "address": "0x147fc85ff0e14b44257865a566efc3a2cffbb1d5",
+    "n_trades": 16,
+    "age_days": 464,
+    "n_closed": 9,
+    "volume": 44425.4491,
+    "mkt_cnt": 9,
+    "trades_per_month": 1.0344827586206897
+  },
+  {
+    "address": "0x14964aefa2cd7caff7878b3820a690a03c5aa429",
+    "n_trades": 414,
+    "age_days": 38,
+    "n_closed": 500,
+    "volume": 718421.6038,
+    "mkt_cnt": 21,
+    "trades_per_month": 326.8421052631579
+  },
+  {
+    "address": "0x14ac84b66a27fc30e56ed620ebfa61cd8105cb21",
+    "n_trades": 432,
+    "age_days": 10,
+    "n_closed": 500,
+    "volume": 222861.4555,
+    "mkt_cnt": 43,
+    "trades_per_month": 432.0
+  },
+  {
+    "address": "0x14ccf1f4f402ed164477e9ac50a699f425307c02",
+    "n_trades": 332,
+    "age_days": 35,
+    "n_closed": 81,
+    "volume": 322723.8336,
+    "mkt_cnt": 38,
+    "trades_per_month": 284.57142857142856
+  },
+  {
+    "address": "0x14f147aad3c4a759e5c9350491af61646f2c4a46",
+    "n_trades": 471,
+    "age_days": 8,
+    "n_closed": 500,
+    "volume": 191936.3006,
+    "mkt_cnt": 35,
+    "trades_per_month": 471.0
+  },
+  {
+    "address": "0x14ffde9178642cc0c18e6c34d40c4e7a110ed178",
+    "n_trades": 500,
+    "age_days": 9,
+    "n_closed": 119,
+    "volume": 274360.4875,
+    "mkt_cnt": 3,
+    "trades_per_month": 500.0
+  },
+  {
+    "address": "0x1521b47bf0c41f6b7fd3ad41cdec566812c8f23e",
+    "n_trades": 490,
+    "age_days": 9,
+    "n_closed": 297,
+    "volume": 1077507.155,
+    "mkt_cnt": 7,
+    "trades_per_month": 490.0
+  },
+  {
+    "address": "0x155b3bdad2f69cdc8a8b41cceb10e55df86464d1",
+    "n_trades": 32,
+    "age_days": 469,
+    "n_closed": 14,
+    "volume": 185551.8217,
+    "mkt_cnt": 14,
+    "trades_per_month": 2.046908315565032
+  },
+  {
+    "address": "0x15e06a47d9c665bda1703ff965ea76f8e56e8d86",
+    "n_trades": 481,
+    "age_days": 267,
+    "n_closed": 342,
+    "volume": 1393956.0455,
+    "mkt_cnt": 39,
+    "trades_per_month": 54.04494382022472
+  },
+  {
+    "address": "0x15e0f290229535be9c01e9fe166ca10febd31ae8",
+    "n_trades": 84,
+    "age_days": 413,
+    "n_closed": 60,
+    "volume": 11689.4362,
+    "mkt_cnt": 57,
+    "trades_per_month": 6.101694915254237
+  },
+  {
+    "address": "0x15f7ddbc6ffe08722ddeb64d51e58aef7b8ca018",
+    "n_trades": 468,
+    "age_days": 15,
+    "n_closed": 109,
+    "volume": 137264.0431,
+    "mkt_cnt": 44,
+    "trades_per_month": 468.0
+  },
+  {
+    "address": "0x15fb78f54bcfb652169cfe18c5c6bf67bcfc83e1",
+    "n_trades": 5,
+    "age_days": 6,
+    "n_closed": 4,
+    "volume": 15077.7353,
+    "mkt_cnt": 5,
+    "trades_per_month": 5.0
+  },
+  {
+    "address": "0x1602856ef17c9b838b2f2b941b9c628cd5eecbf7",
+    "n_trades": 462,
+    "age_days": 23,
+    "n_closed": 500,
+    "volume": 399354.0672,
+    "mkt_cnt": 27,
+    "trades_per_month": 462.0
+  },
+  {
+    "address": "0x1604b15af9eab550175b268dd574a155c5ebff0e",
+    "n_trades": 349,
+    "age_days": 10,
+    "n_closed": 438,
+    "volume": 210412.9261,
+    "mkt_cnt": 23,
+    "trades_per_month": 349.0
+  },
+  {
+    "address": "0x161eb16874e34f545991e774b4e1ac5b65f86ef0",
+    "n_trades": 1783,
+    "age_days": 7,
+    "n_closed": 543,
+    "volume": 2660381.2893,
+    "mkt_cnt": 39,
+    "trades_per_month": 1783.0
+  },
+  {
+    "address": "0x1624231bb94bb0b8152281a58cbb18c3f565bf63",
+    "n_trades": 383,
+    "age_days": 1,
+    "n_closed": 519,
+    "volume": 127076.3287,
+    "mkt_cnt": 35,
+    "trades_per_month": 383.0
+  },
+  {
+    "address": "0x162f6fff88a52864f2ecc9833e58089d5254798d",
+    "n_trades": 457,
+    "age_days": 8,
+    "n_closed": 272,
+    "volume": 206458.2288,
+    "mkt_cnt": 53,
+    "trades_per_month": 457.0
+  },
+  {
+    "address": "0x1638095947833f43a732e0da2ca9c3548887339b",
+    "n_trades": 498,
+    "age_days": 386,
+    "n_closed": 500,
+    "volume": 32205.1122,
+    "mkt_cnt": 6,
+    "trades_per_month": 38.70466321243523
+  },
+  {
+    "address": "0x1655eac53ec852b6c3785d15feea40035f71a669",
+    "n_trades": 160,
+    "age_days": 838,
+    "n_closed": 29,
+    "volume": 278412.1542,
+    "mkt_cnt": 28,
+    "trades_per_month": 5.727923627684964
+  },
+  {
+    "address": "0x169d73848761ec7a4a305d9cbf69f280841cfb3d",
+    "n_trades": 407,
+    "age_days": 24,
+    "n_closed": 76,
+    "volume": 156849.3434,
+    "mkt_cnt": 36,
+    "trades_per_month": 407.0
+  },
+  {
+    "address": "0x16b1f68da281f346fa9ff7a46e9d55826abe968a",
+    "n_trades": 433,
+    "age_days": 12,
+    "n_closed": 78,
+    "volume": 372087.0161,
+    "mkt_cnt": 41,
+    "trades_per_month": 433.0
+  },
+  {
+    "address": "0x16b29c50f2439faf627209b2ac0c7bbddaa8a881",
+    "n_trades": 446,
+    "age_days": 70,
+    "n_closed": 500,
+    "volume": 165003.5602,
+    "mkt_cnt": 39,
+    "trades_per_month": 191.14285714285714
+  },
+  {
+    "address": "0x16bd7cc71f6da1e77d1d8255677abc75b9bae288",
+    "n_trades": 377,
+    "age_days": 18,
+    "n_closed": 500,
+    "volume": 41571.0533,
+    "mkt_cnt": 17,
+    "trades_per_month": 377.0
+  },
+  {
+    "address": "0x16dc508483ea6bd13b2c1cc499a0631d3fcc56c1",
+    "n_trades": 10,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 34346.8005,
+    "mkt_cnt": 6,
+    "trades_per_month": 2.479338842975207
+  },
+  {
+    "address": "0x17559efac103ac7f361be37ec0b93888d4c55aac",
+    "n_trades": 840,
+    "age_days": 5,
+    "n_closed": 716,
+    "volume": 324897.8787,
+    "mkt_cnt": 114,
+    "trades_per_month": 840.0
+  },
+  {
+    "address": "0x175eae6867e4aa96973ba7b873e9c7a7657f49b4",
+    "n_trades": 38,
+    "age_days": 22,
+    "n_closed": 11,
+    "volume": 92344.0977,
+    "mkt_cnt": 37,
+    "trades_per_month": 38.0
+  },
+  {
+    "address": "0x17db3fcd93ba12d38382a0cade24b200185c5f6d",
+    "n_trades": 480,
+    "age_days": 127,
+    "n_closed": 97,
+    "volume": 1595530.8036,
+    "mkt_cnt": 56,
+    "trades_per_month": 113.38582677165354
+  },
+  {
+    "address": "0x17ed7dbfdcfe228016ac50571182f974d59ac087",
+    "n_trades": 449,
+    "age_days": 28,
+    "n_closed": 500,
+    "volume": 106490.5682,
+    "mkt_cnt": 33,
+    "trades_per_month": 449.0
+  },
+  {
+    "address": "0x1803cf8f2c0d06716e5052a9421215764872bbf7",
+    "n_trades": 221,
+    "age_days": 66,
+    "n_closed": 49,
+    "volume": 290379.3189,
+    "mkt_cnt": 51,
+    "trades_per_month": 100.45454545454545
+  },
+  {
+    "address": "0x1835ea8b147157e90c298c550f3f0f4d8543b828",
+    "n_trades": 467,
+    "age_days": 48,
+    "n_closed": 93,
+    "volume": 453126.352,
+    "mkt_cnt": 37,
+    "trades_per_month": 291.875
+  },
+  {
+    "address": "0x183d846b96510f1987db52648545317427d91270",
+    "n_trades": 542,
+    "age_days": 10,
+    "n_closed": 341,
+    "volume": 633840.5083,
+    "mkt_cnt": 23,
+    "trades_per_month": 542.0
+  },
+  {
+    "address": "0x18a720b0e71097e4b5bea0193dc15bf8b26f98ec",
+    "n_trades": 4,
+    "age_days": 3,
+    "n_closed": 0,
+    "volume": 20491.545000000002,
+    "mkt_cnt": 1,
+    "trades_per_month": 4.0
+  },
+  {
+    "address": "0x18bb751dcec69d2f15a683a640e61e22d0d9e5cd",
+    "n_trades": 834,
+    "age_days": 5,
+    "n_closed": 133,
+    "volume": 89430.6649,
+    "mkt_cnt": 30,
+    "trades_per_month": 834.0
+  },
+  {
+    "address": "0x18d95dfc1a5a0f402b47e648d1c64457e7932204",
+    "n_trades": 8,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 17250.5055,
+    "mkt_cnt": 7,
+    "trades_per_month": 1.9834710743801653
+  },
+  {
+    "address": "0x194f11fffa7d57bf8e1fa4015db5c47114ac9bd5",
+    "n_trades": 3,
+    "age_days": 44,
+    "n_closed": 1,
+    "volume": 16202.8568,
+    "mkt_cnt": 2,
+    "trades_per_month": 2.0454545454545454
+  },
+  {
+    "address": "0x1979ae6b7e6534de9c4539d0c205e582ca637c9d",
+    "n_trades": 354,
+    "age_days": 17,
+    "n_closed": 500,
+    "volume": 9023.7718,
+    "mkt_cnt": 28,
+    "trades_per_month": 354.0
+  },
+  {
+    "address": "0x198fa74120438fb7cabccb61aa824c6720dfc419",
+    "n_trades": 590,
+    "age_days": 10,
+    "n_closed": 296,
+    "volume": 275650.6925,
+    "mkt_cnt": 35,
+    "trades_per_month": 590.0
+  },
+  {
+    "address": "0x1992a372a245dff7d4c546f10b4d5dcabffdf47c",
+    "n_trades": 19,
+    "age_days": 465,
+    "n_closed": 9,
+    "volume": 25443.1019,
+    "mkt_cnt": 10,
+    "trades_per_month": 1.2258064516129032
+  },
+  {
+    "address": "0x19afba69465497e92c5dabf05240dad1bf4299a6",
+    "n_trades": 2,
+    "age_days": 39,
+    "n_closed": 1,
+    "volume": 15836.473899999999,
+    "mkt_cnt": 2,
+    "trades_per_month": 1.5384615384615383
+  },
+  {
+    "address": "0x19cf9a2d02fcc8ae5c2be125206e62e46528ce7b",
+    "n_trades": 37,
+    "age_days": 469,
+    "n_closed": 14,
+    "volume": 236314.1121,
+    "mkt_cnt": 15,
+    "trades_per_month": 2.366737739872068
+  },
+  {
+    "address": "0x19e27eeb3641ae664e77dbb80c86021f048ece3c",
+    "n_trades": 273,
+    "age_days": 64,
+    "n_closed": 25,
+    "volume": 405035.08019999997,
+    "mkt_cnt": 58,
+    "trades_per_month": 127.96875
+  },
+  {
+    "address": "0x19f03d085c5f2ebf563a2f9e2b047817ab0c8221",
+    "n_trades": 10,
+    "age_days": 121,
+    "n_closed": 6,
+    "volume": 34502.1962,
+    "mkt_cnt": 7,
+    "trades_per_month": 2.479338842975207
+  },
+  {
+    "address": "0x1a29b75d4bfb5d62b343e4abdd10b60c0ce19b2e",
+    "n_trades": 591,
+    "age_days": 11,
+    "n_closed": 82,
+    "volume": 710330.3085,
+    "mkt_cnt": 12,
+    "trades_per_month": 591.0
+  }
+]

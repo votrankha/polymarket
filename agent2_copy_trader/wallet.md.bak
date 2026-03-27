@@ -1,0 +1,14 @@
+# wallet.md — Cấu Hình Agent 2 Copy Trader
+# ─────────────────────────────────────────────────────────────────────────────
+# FILE NÀY DO BẠN SỬA — Agent 2 hot-reload mỗi 15 giây (không cần restart)
+#
+# Cấu trúc file:
+#   ## Settings       → bật/tắt chế độ, risk management
+#   ## Manual Wallets → ví bạn muốn copy tay
+#   ## Blacklist      → ví bạn muốn bỏ qua
+#   
+
+
+
+## Active Wallets
+

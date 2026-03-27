@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polymarket Whale Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap');
+  :root {
+    --bg:#080b10; --bg2:#0d1219; --bg3:#121922;
+    --border:#1e2d3d; --accent:#00e5ff; --green:#00ff88;
+    --red:#ff3d57; --yellow:#ffd600; --muted:#4a6080;
+    --text:#c8d8e8; --text2:#7a99bb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;font-size:13px;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;z-index:999;pointer-events:none;
+    background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;
+    border-bottom:1px solid var(--border);background:var(--bg2);position:sticky;top:0;z-index:100}
+  .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--accent);letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:var(--text2);font-weight:400}
+  .hdr-right{display:flex;align-items:center;gap:16px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .db-info{color:var(--muted);font-size:11px}.db-info b{color:var(--accent)}
+  .refresh-btn{background:transparent;border:1px solid var(--border);color:var(--muted);
+    padding:5px 12px;border-radius:4px;cursor:pointer;font-size:11px;font-family:inherit;transition:.2s}
+  .refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+  .nav{display:flex;gap:2px;padding:0 28px;border-bottom:1px solid var(--border);background:var(--bg2)}
+  .nav-tab{padding:12px 20px;cursor:pointer;color:var(--muted);font-size:12px;
+    border-bottom:2px solid transparent;transition:.2s;letter-spacing:.5px;text-transform:uppercase}
+  .nav-tab:hover{color:var(--text)}.nav-tab.active{color:var(--accent);border-color:var(--accent)}
+
+  main{padding:24px 28px}
+  .panel{display:none}.panel.active{display:block}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:22px}
+  .stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 18px;
+    position:relative;overflow:hidden;transition:border-color .2s}
+  .stat-card:hover{border-color:var(--accent)}
+  .stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,var(--accent),transparent)}
+  .stat-label{color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+  .stat-value{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--text)}
+  .stat-value.green{color:var(--green)}.stat-value.red{color:var(--red)}
+  .stat-value.yellow{color:var(--yellow)}.stat-value.accent{color:var(--accent)}
+
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+  .chart-area{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px;min-height:200px}
+  .chart-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;margin-bottom:14px;color:var(--text)}
+
+  .table-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:18px}
+  .table-header{padding:12px 18px;border-bottom:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .table-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:var(--text)}
+  .table-count{color:var(--muted);font-size:11px}
+  table{width:100%;border-collapse:collapse}
+  th{padding:9px 14px;text-align:left;color:var(--muted);font-size:10px;letter-spacing:1px;
+    text-transform:uppercase;font-weight:400;border-bottom:1px solid var(--border);background:rgba(0,0,0,.2)}
+  td{padding:9px 14px;border-bottom:1px solid rgba(30,45,61,.5);vertical-align:middle;font-size:12px}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:rgba(0,229,255,.03)}
+  .addr{font-size:11px;color:var(--accent);cursor:pointer}
+  .addr:hover{text-decoration:underline}
+
+  .full-addr{
+    font-size:11px;color:var(--accent);cursor:pointer;
+    font-family:'Space Mono',monospace;letter-spacing:.2px;
+  }
+  .full-addr:hover{text-decoration:underline;color:#fff}
+
+  .go-trades-btn{
+    background:transparent;border:1px solid var(--border);
+    color:var(--muted);padding:3px 9px;border-radius:3px;
+    cursor:pointer;font-size:10px;font-family:inherit;
+    white-space:nowrap;transition:.2s;flex-shrink:0;
+  }
+  .go-trades-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,229,255,.06)}
+
+  .filter-banner{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.25);
+    border-radius:6px;padding:8px 14px;margin-bottom:12px;
+    font-size:11px;color:var(--accent);
+  }
+  .filter-banner b{letter-spacing:.3px;word-break:break-all}
+  .clear-btn{
+    margin-left:auto;background:transparent;border:1px solid rgba(0,229,255,.3);
+    color:var(--accent);padding:3px 10px;border-radius:3px;cursor:pointer;
+    font-size:10px;font-family:inherit;white-space:nowrap;transition:.2s;
+  }
+  .clear-btn:hover{background:rgba(0,229,255,.15)}
+  .score-wrap{display:flex;align-items:center;gap:8px}
+  .score-bar{flex:1;height:4px;background:var(--bg3);border-radius:2px;overflow:hidden;min-width:50px}
+  .score-fill{height:100%;border-radius:2px}
+  .score-num{font-size:12px;font-weight:700;min-width:32px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;letter-spacing:.5px;text-transform:uppercase;font-weight:700}
+  .badge-open{background:rgba(0,229,255,.15);color:var(--accent)}
+  .badge-won{background:rgba(0,255,136,.15);color:var(--green)}
+  .badge-lost{background:rgba(255,61,87,.15);color:var(--red)}
+  .badge-expired{background:rgba(74,96,128,.2);color:var(--muted)}
+  .pos{color:var(--green)}.neg{color:var(--red)}
+
+  .toolbar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+  .search-box{flex:1;min-width:200px;background:var(--bg2);border:1px solid var(--border);
+    border-radius:4px;padding:8px 12px;color:var(--text);font-family:'Space Mono',monospace;
+    font-size:12px;outline:none;transition:.2s}
+  .search-box:focus{border-color:var(--accent)}
+  .filter-select{background:var(--bg2);border:1px solid var(--border);border-radius:4px;
+    padding:8px 12px;color:var(--text);font-family:'Space Mono',monospace;font-size:12px;outline:none;cursor:pointer}
+  .load-more{background:transparent;border:1px solid var(--border);color:var(--muted);
+    padding:8px 20px;border-radius:4px;cursor:pointer;font-size:12px;font-family:inherit;
+    display:block;margin:12px auto;transition:.2s}
+  .load-more:hover{border-color:var(--accent);color:var(--accent)}
+
+  .modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.85);
+    backdrop-filter:blur(4px);align-items:center;justify-content:center}
+  .modal-overlay.show{display:flex}
+  .modal{background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+    padding:26px;width:min(620px,92vw);max-height:82vh;overflow-y:auto;animation:up .2s ease}
+  @keyframes up{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  .modal-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--accent)}
+  .modal-close{color:var(--muted);cursor:pointer;font-size:20px;line-height:1}
+  .modal-close:hover{color:var(--text)}
+  .kv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .kv{background:var(--bg3);border-radius:6px;padding:12px 14px}
+  .kv-key{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+  .kv-val{color:var(--text);font-size:14px;font-weight:700}
+
+  .loading{display:flex;align-items:center;gap:10px;padding:30px 20px;color:var(--muted);justify-content:center}
+  .spin{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--accent);
+    border-radius:50%;animation:spin .6s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .empty{text-align:center;padding:50px 20px;color:var(--muted)}
+
+  .toast{position:fixed;bottom:22px;right:22px;z-index:999;background:var(--bg2);
+    border:1px solid var(--accent);border-radius:6px;padding:9px 16px;font-size:12px;color:var(--accent);
+    transform:translateY(50px);opacity:0;transition:.3s;pointer-events:none}
+  .toast.show{transform:translateY(0);opacity:1}
+  ::-webkit-scrollbar{width:5px;height:5px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">POLY<span>WATCH</span></div>
+  <div class="hdr-right">
+    <div class="dot" id="dot"></div>
+    <div class="db-info" id="dbInfo">Đang kết nối...</div>
+    <button class="refresh-btn" onclick="loadAll()">⟳ Refresh</button>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-tab active"  onclick="tab('overview')">📊 Tổng quan</div>
+  <div class="nav-tab"         onclick="tab('whales')">🐋 Whale Wallets</div>
+  <div class="nav-tab"         onclick="tab('trades')">📈 Trade History</div>
+  <div class="nav-tab"         onclick="tab('copies')">🤖 Copy Trades</div>
+  <div class="nav-tab"         onclick="tab('markets')">🏪 Markets</div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<div id="panel-overview" class="panel active">
+  <div class="stat-grid" id="ovStats"></div>
+  <div class="row2">
+    <div class="chart-area"><div class="chart-title">Top 10 Whale Scores</div><canvas id="scoreChart" height="170"></canvas></div>
+    <div class="chart-area"><div class="chart-title">Copy Trade Results</div><canvas id="perfChart"  height="170"></canvas></div>
+  </div>
+  <div class="table-wrap">
+    <div class="table-header">
+      <div class="table-title">Top Whales</div>
+      <div class="table-count" id="ovCount"></div>
+    </div>
+    <table><thead><tr>
+      <th>#</th><th>Wallet</th><th>Score</th><th>Win Rate</th>
+      <th>Kelly</th><th>Net PnL</th><th>Avg Size</th><th>Age</th>
+    </tr></thead><tbody id="ovTable"></tbody></table>
+  </div>
+</div>
+
+<!-- WHALES -->
+<div id="panel-whales" class="panel">
+  <div class="toolbar">
+    <input class="search-box" id="wSearch" placeholder="Tìm địa chỉ ví..." oninput="debounce(loadWhales,400)()">
+    <select class="filter-select" id="wSort" onchange="loadWhales()">
+      <option value="score">Score</option>
+      <option value="win_rate">Win Rate</option>
+      <option value="kelly">Kelly</option>
+      <option value="net_pnl">Net PnL</option>
+      <option value="total_volume">Volume</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <div class="table-header">
+      <div class="table-title">Wallet Snapshots</div>
+      <div class="table-count" id="wCount"></div>
+    </div>
+    <table><thead><tr>
+      <th>Wallet</th><th>Score</th><th>Win Rate</th><th>Kelly</th>
+      <th>Net PnL</th><th>Volume</th><th>Avg Size</th><th>Trades/mo</th><th>Age</th><th>Trades DB</th>
+    </tr></thead><tbody id="wTable"></tbody></table>
+  </div>
+</div>
+
+<!-- TRADES -->
+<div id="panel-trades" class="panel">
+  <div id="tradeBanner" style="display:none"></div>
+  <div class="toolbar">
+    <input class="search-box" id="tSearch" placeholder="Tìm ví, market, outcome..." oninput="debounce(loadTrades,400)()">
+    <select class="filter-select" id="tSource" onchange="loadTrades()">
+      <option value="">Tất cả nguồn</option>
+      <option value="s2">S2 History</option>
+      <option value="s4">S4 Realtime</option>
+    </select>
+    <select class="filter-select" id="tOutcome" onchange="loadTrades()">
+      <option value="">Tất cả</option>
+      <option value="YES">YES</option>
+      <option value="NO">NO</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <div class="table-header">
+      <div class="table-title">Whale Trades</div>
+      <div class="table-count" id="tCount"></div>
+    </div>
+    <table><thead><tr>
+      <th>Time</th><th>Wallet</th><th>Market</th>
+      <th>Outcome</th><th>Price</th><th>Size USDC</th><th>Src</th>
+    </tr></thead><tbody id="tTable"></tbody></table>
+  </div>
+  <button class="load-more" id="tMore" onclick="loadMoreTrades()">Load thêm 100</button>
+</div>
+
+<!-- COPIES -->
+<div id="panel-copies" class="panel">
+  <div class="stat-grid" id="cpStats"></div>
+  <div class="toolbar">
+    <input class="search-box" id="cpSearch" placeholder="Tìm market, wallet..." oninput="debounce(loadCopies,400)()">
+    <select class="filter-select" id="cpStatus" onchange="loadCopies()">
+      <option value="">Tất cả</option>
+      <option value="open">Open</option>
+      <option value="won">Won</option>
+      <option value="lost">Lost</option>
+      <option value="expired">Expired</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <div class="table-header">
+      <div class="table-title">Copy Trade History</div>
+      <div class="table-count" id="cpCount"></div>
+    </div>
+    <table><thead><tr>
+      <th>Time</th><th>Wallet</th><th>Market</th><th>Out</th>
+      <th>Entry</th><th>Spent</th><th>Status</th><th>PnL</th><th>W.Score</th>
+    </tr></thead><tbody id="cpTable"></tbody></table>
+  </div>
+</div>
+
+<!-- MARKETS -->
+<div id="panel-markets" class="panel">
+  <div class="toolbar">
+    <input class="search-box" id="mSearch" placeholder="Tìm market..." oninput="debounce(loadMarkets,400)()">
+    <select class="filter-select" id="mFilter" onchange="loadMarkets()">
+      <option value="">Tất cả</option>
+      <option value="0">Active</option>
+      <option value="1">Resolved</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <div class="table-header">
+      <div class="table-title">Market Cache</div>
+      <div class="table-count" id="mCount"></div>
+    </div>
+    <table><thead><tr>
+      <th>Market</th><th>Category</th><th>End Date</th><th>Status</th><th>Winner</th><th>Cached</th>
+    </tr></thead><tbody id="mTable"></tbody></table>
+  </div>
+</div>
+
+</main>
+
+<!-- Wallet Modal -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="modal-title" id="modalTitle">—</div>
+      <div class="modal-close" onclick="closeModal()">✕</div>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script>
+// ════════════════════════════════════════════════════
+//  API BASE — tự detect: server hoặc file://
+// ════════════════════════════════════════════════════
+const API = location.protocol === 'file:' ? null : '';
+
+async function api(path) {
+  if (!API && API !== '') { showToast('⚠ Cần chạy dashboard_server.py'); return null; }
+  try {
+    const r = await fetch(API + path);
+    if (!r.ok) throw new Error(r.status);
+    return await r.json();
+  } catch(e) {
+    console.error('API error:', path, e);
+    showToast('❌ Lỗi kết nối server: ' + e.message);
+    return null;
+  }
+}
+
+// ════════════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════════════
+let tradeOffset = 0;
+let tradeTotal  = 0;
+
+window.addEventListener('load', () => {
+  if (location.protocol === 'file:') {
+    document.getElementById('dot').style.background = 'var(--red)';
+    document.getElementById('dot').style.boxShadow  = '0 0 8px var(--red)';
+    document.getElementById('dbInfo').innerHTML =
+      '⚠ Cần chạy: <b>python dashboard_server.py</b> rồi mở <b>http://localhost:5000</b>';
+    return;
+  }
+  loadAll();
+});
+
+async function loadAll() {
+  await loadOverview();
+  loadWhales();
+  loadTrades();
+  loadCopies();
+  loadMarkets();
+}
+
+// ════════════════════════════════════════════════════
+//  OVERVIEW
+// ════════════════════════════════════════════════════
+async function loadOverview() {
+  const s = await api('/api/stats');
+  if (!s) return;
+
+  document.getElementById('dbInfo').innerHTML =
+    `<b>${s.whales}</b> whales · <b>${fmtN(s.trades)}</b> trades · <b>${s.copies}</b> copies · <b>${s.db_mb}MB</b>`;
+
+  const wr = s.win_rate != null ? s.win_rate+'%' : '—%';
+  document.getElementById('ovStats').innerHTML = [
+    {l:'Whales Tracked',   v:s.whales,             c:'accent'},
+    {l:'Total Trades',     v:fmtN(s.trades),        c:''},
+    {l:'Total Volume',     v:'$'+fmtM(s.total_volume), c:''},
+    {l:'Copy Trades',      v:s.copies,              c:''},
+    {l:'Bot Win Rate',     v:wr,                    c:(s.win_rate>=60?'green':'red')},
+    {l:'Total PnL',        v:(s.total_pnl>=0?'+':'')+'$'+fmtM(s.total_pnl), c:s.total_pnl>=0?'green':'red'},
+    {l:'USDC Deployed',    v:'$'+fmtM(s.usdc_spent),c:'yellow'},
+    {l:'Top Score',        v:(s.top_score||0).toFixed(3), c:'accent'},
+  ].map(x=>`<div class="stat-card">
+    <div class="stat-label">${x.l}</div>
+    <div class="stat-value ${x.c}">${x.v}</div>
+  </div>`).join('');
+
+  // Top whales table
+  const whales = await api('/api/whales?limit=10');
+  if (!whales) return;
+  document.getElementById('ovCount').textContent = `Top ${whales.length}`;
+  document.getElementById('ovTable').innerHTML = whales.map((w,i)=>`<tr>
+    <td style="color:var(--muted)">${i+1}</td>
+    <td><span class="addr" onclick="filterTradesByWallet('${w.address}')" title="${w.address}"><span style="font-size:10px;letter-spacing:.3px">${w.address}</span></span></td>
+    <td>${scoreBar(w.score)}</td>
+    <td class="${w.win_rate>=60?'pos':'neg'}">${f1(w.win_rate)}%</td>
+    <td class="${w.kelly>=0.15?'pos':''}">${f4(w.kelly)}</td>
+    <td class="${w.net_pnl>=0?'pos':'neg'}">${w.net_pnl>=0?'+':''}$${fmtM(w.net_pnl)}</td>
+    <td>$${fmtM(w.avg_size)}</td>
+    <td>${w.account_age_days}d</td>
+  </tr>`).join('');
+
+  drawScoreChart(whales);
+
+  // Copy performance chart
+  drawPerfChart(s);
+}
+
+function drawScoreChart(whales) {
+  const ctx = document.getElementById('scoreChart');
+  if (ctx._ch) ctx._ch.destroy();
+  ctx._ch = new Chart(ctx, {
+    type:'bar',
+    data:{
+      labels: whales.map(w=>sa(w.address)),
+      datasets:[{
+        data: whales.map(w=>+(w.score||0).toFixed(4)),
+        backgroundColor: whales.map(w=>w.score>=0.6?'rgba(0,255,136,.75)':w.score>=0.4?'rgba(0,229,255,.75)':'rgba(255,213,0,.75)'),
+        borderWidth:0, borderRadius:3,
+      }]
+    },
+    options:{
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{ticks:{color:'#4a6080',font:{size:10}},grid:{display:false}},
+        y:{ticks:{color:'#4a6080',font:{size:10}},grid:{color:'rgba(30,45,61,.5)'},min:0,max:1}
+      }
+    }
+  });
+}
+
+function drawPerfChart(s) {
+  const ctx = document.getElementById('perfChart');
+  if (ctx._ch) ctx._ch.destroy();
+  const won=s.won||0, lost=s.lost||0;
+  const open_=s.copies - won - lost;
+  if (!s.copies) return;
+  ctx._ch = new Chart(ctx, {
+    type:'doughnut',
+    data:{
+      labels:['Won','Lost','Open/Other'],
+      datasets:[{
+        data:[won,lost,open_],
+        backgroundColor:['rgba(0,255,136,.8)','rgba(255,61,87,.8)','rgba(0,229,255,.6)'],
+        borderWidth:0,
+      }]
+    },
+    options:{plugins:{legend:{labels:{color:'#7a99bb',font:{size:11}}}},cutout:'65%'}
+  });
+}
+
+// ════════════════════════════════════════════════════
+//  WHALES
+// ════════════════════════════════════════════════════
+async function loadWhales() {
+  const q = encodeURIComponent(document.getElementById('wSearch').value);
+  const s = document.getElementById('wSort').value;
+  showLoading('wTable', 10);
+  const rows = await api(`/api/whales?q=${q}&sort=${s}&limit=200`);
+  if (!rows) return;
+  document.getElementById('wCount').textContent = `${rows.length} wallets`;
+  document.getElementById('wTable').innerHTML = rows.length ? rows.map(w=>`<tr>
+    <td>
+      <div style="display:flex;align-items:center;gap:8px;min-width:340px">
+        <span class="full-addr" onclick="copyAddr('${w.address}')" title="Click để copy">${w.address}</span>
+        <button class="go-trades-btn" onclick="filterTradesByWallet('${w.address}')">📈 Trades</button>
+      </div>
+    </td>
+    <td>${scoreBar(w.score)}</td>
+    <td class="${w.win_rate>=60?'pos':'neg'}">${f1(w.win_rate)}%</td>
+    <td class="${w.kelly>=0.15?'pos':''}">${f4(w.kelly)}</td>
+    <td class="${w.net_pnl>=0?'pos':'neg'}">${w.net_pnl>=0?'+':''}$${fmtM(w.net_pnl)}</td>
+    <td>$${fmtM(w.total_volume)}</td>
+    <td>$${fmtM(w.avg_size)}</td>
+    <td>${f1(w.trades_per_month)}</td>
+    <td>${w.account_age_days}d</td>
+    <td style="color:var(--muted)">${(w.trade_count||0).toLocaleString()}</td>
+  </tr>`).join('') : emptyRow(10);
+}
+
+// ════════════════════════════════════════════════════
+//  TRADES
+// ════════════════════════════════════════════════════
+async function loadTrades() {
+  tradeOffset = 0;
+  showLoading('tTable', 7);
+  const rows = await fetchTrades(0);
+  if (!rows) return;
+  document.getElementById('tTable').innerHTML = rows.data.length ? rows.data.map(tradeRow).join('') : emptyRow(7);
+  tradeTotal  = rows.total;
+  tradeOffset = rows.data.length;
+  document.getElementById('tCount').textContent = `${rows.data.length.toLocaleString()} / ${rows.total.toLocaleString()}`;
+  document.getElementById('tMore').style.display = tradeOffset >= tradeTotal ? 'none' : 'block';
+}
+
+async function loadMoreTrades() {
+  const rows = await fetchTrades(tradeOffset);
+  if (!rows || !rows.data.length) return;
+  document.getElementById('tTable').insertAdjacentHTML('beforeend', rows.data.map(tradeRow).join(''));
+  tradeOffset += rows.data.length;
+  document.getElementById('tCount').textContent = `${tradeOffset.toLocaleString()} / ${tradeTotal.toLocaleString()}`;
+  if (tradeOffset >= tradeTotal) document.getElementById('tMore').style.display = 'none';
+}
+
+async function fetchTrades(offset) {
+  const q = encodeURIComponent(document.getElementById('tSearch').value);
+  const src = document.getElementById('tSource').value;
+  const out = document.getElementById('tOutcome').value;
+  return api(`/api/trades?q=${q}&source=${src}&outcome=${out}&offset=${offset}&limit=100`);
+}
+
+function tradeRow(t) {
+  return `<tr>
+    <td style="color:var(--muted);font-size:11px">${fmtT(t.ts)}</td>
+    <td><span class="addr" onclick="filterTradesByWallet('${t.address}')" title="${t.address}"><span style="font-size:10px">${t.address}</span></span></td>
+    <td style="max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${t.question||''}">${t.question||sa(t.market_id,'mkt')}</td>
+    <td><span style="color:${t.outcome==='YES'?'var(--green)':'var(--red)'}">${t.outcome||'—'}</span></td>
+    <td>${f3(t.price)}</td>
+    <td>$${fmtM(t.usdc_size)}</td>
+    <td style="color:var(--muted);font-size:10px">${t.source||'—'}</td>
+  </tr>`;
+}
+
+// ════════════════════════════════════════════════════
+//  COPIES
+// ════════════════════════════════════════════════════
+async function loadCopies() {
+  const q  = encodeURIComponent(document.getElementById('cpSearch').value);
+  const st = document.getElementById('cpStatus').value;
+  showLoading('cpTable', 9);
+  const rows = await api(`/api/copies?q=${q}&status=${st}`);
+  if (!rows) return;
+
+  const won  = rows.filter(r=>r.status==='won').length;
+  const lost = rows.filter(r=>r.status==='lost').length;
+  const pnl  = rows.reduce((s,r)=>s+(r.pnl_usdc||0),0);
+  const spent= rows.reduce((s,r)=>s+(r.usdc_spent||0),0);
+  const wr   = won+lost>0?(won/(won+lost)*100).toFixed(1):'—';
+  document.getElementById('cpStats').innerHTML = [
+    {l:'Total',    v:rows.length, c:'accent'},
+    {l:'Won',      v:won,         c:'green'},
+    {l:'Lost',     v:lost,        c:'red'},
+    {l:'Win Rate', v:wr+'%',      c:parseFloat(wr)>=50?'green':'red'},
+    {l:'Total PnL',v:(pnl>=0?'+':'')+'$'+fmtM(pnl), c:pnl>=0?'green':'red'},
+    {l:'Deployed', v:'$'+fmtM(spent), c:'yellow'},
+  ].map(x=>`<div class="stat-card">
+    <div class="stat-label">${x.l}</div>
+    <div class="stat-value ${x.c}">${x.v}</div>
+  </div>`).join('');
+
+  document.getElementById('cpCount').textContent = `${rows.length} records`;
+  document.getElementById('cpTable').innerHTML = rows.length ? rows.map(c=>`<tr>
+    <td style="color:var(--muted);font-size:11px">${fmtT(c.copied_at)}</td>
+    <td><span class="addr" onclick="filterTradesByWallet('${c.wallet}')" title="${c.wallet}"><span style="font-size:10px">${c.wallet}</span></span></td>
+    <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.question||'—'}</td>
+    <td><span style="color:${c.outcome==='YES'?'var(--green)':'var(--red)'}">${c.outcome||'—'}</span></td>
+    <td>${f3(c.entry_price)}</td>
+    <td>$${fmtM(c.usdc_spent)}</td>
+    <td><span class="badge badge-${c.status}">${c.status}</span></td>
+    <td class="${(c.pnl_usdc||0)>=0?'pos':'neg'}">${c.pnl_usdc!=null?(c.pnl_usdc>=0?'+':'')+'$'+fmtM(c.pnl_usdc):'—'}</td>
+    <td style="color:var(--muted)">${f2(c.wallet_score)}</td>
+  </tr>`).join('') : emptyRow(9);
+}
+
+// ════════════════════════════════════════════════════
+//  MARKETS
+// ════════════════════════════════════════════════════
+async function loadMarkets() {
+  const q = encodeURIComponent(document.getElementById('mSearch').value);
+  const f = document.getElementById('mFilter').value;
+  showLoading('mTable', 6);
+  const rows = await api(`/api/markets?q=${q}&resolved=${f}`);
+  if (!rows) return;
+  document.getElementById('mCount').textContent = `${rows.length} markets`;
+  document.getElementById('mTable').innerHTML = rows.length ? rows.map(m=>`<tr>
+    <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${m.question||''}">${m.question||sa(m.condition_id,'mkt')}</td>
+    <td style="color:var(--muted)">${m.category||'—'}</td>
+    <td>${m.end_date||'—'}</td>
+    <td>${m.resolved?'<span class="badge badge-won">Resolved</span>':'<span class="badge badge-open">Active</span>'}</td>
+    <td>${m.winning_outcome?`<span style="color:${m.winning_outcome==='YES'?'var(--green)':'var(--red)'}">${m.winning_outcome}</span>`:'—'}</td>
+    <td style="color:var(--muted);font-size:11px">${fmtT(m.cached_at)}</td>
+  </tr>`).join('') : emptyRow(6);
+}
+
+// ════════════════════════════════════════════════════
+//  WALLET MODAL
+// ════════════════════════════════════════════════════
+async function showWallet(addr) {
+  document.getElementById('modalTitle').textContent = addr;
+  document.getElementById('modalBody').innerHTML = '<div class="loading"><div class="spin"></div>Đang tải...</div>';
+  document.getElementById('modal').classList.add('show');
+
+  const d = await api(`/api/wallet/${addr}`);
+  if (!d) return;
+
+  // Tìm snapshot mới nhất
+  const snap = d.snapshots.length ? d.snapshots[d.snapshots.length-1] : null;
+  const fields = [
+    ['Score',       snap ? f4(snap.score)    : '—'],
+    ['Win Rate',    snap ? f1(snap.win_rate)+'%' : '—'],
+    ['Kelly',       snap ? f4(snap.kelly)    : '—'],
+    ['Net PnL',     snap ? (snap.net_pnl>=0?'+':'')+'$'+fmtM(snap.net_pnl) : '—'],
+    ['Trades in DB',d.trade_count.toLocaleString()],
+    ['Copy Trades', d.copy_count],
+    ['Snapshots',   d.snapshots.length],
+    ['Address',     addr.slice(0,10)+'...'],
+  ];
+
+  document.getElementById('modalBody').innerHTML = `
+    <div class="kv-grid">${fields.map(([k,v])=>`
+      <div class="kv"><div class="kv-key">${k}</div><div class="kv-val">${v}</div></div>
+    `).join('')}</div>
+    ${d.snapshots.length>1?`
+      <div style="margin-top:18px">
+        <div class="chart-title" style="margin-bottom:10px">Score History (${d.snapshots.length} snapshots)</div>
+        <canvas id="snapChart" height="80"></canvas>
+      </div>`:''}
+  `;
+
+  if (d.snapshots.length > 1) {
+    setTimeout(() => {
+      const ctx = document.getElementById('snapChart');
+      new Chart(ctx, {
+        type:'line',
+        data:{
+          labels: d.snapshots.map(s=>fmtT(s.ts, true)),
+          datasets:[{
+            label:'Score', data: d.snapshots.map(s=>+(s.score||0).toFixed(4)),
+            borderColor:'#00e5ff', borderWidth:2, pointRadius:3,
+            fill:true, backgroundColor:'rgba(0,229,255,.08)',
+          }]
+        },
+        options:{
+          plugins:{legend:{display:false}},
+          scales:{
+            x:{ticks:{color:'#4a6080',font:{size:9},maxTicksLimit:8},grid:{display:false}},
+            y:{ticks:{color:'#4a6080',font:{size:9}},grid:{color:'rgba(30,45,61,.4)'}}
+          }
+        }
+      });
+    }, 60);
+  }
+}
+
+function closeModal() { document.getElementById('modal').classList.remove('show'); }
+
+// ════════════════════════════════════════════════════
+//  HELPERS
+// ════════════════════════════════════════════════════
+function tab(id) {
+  const ids=['overview','whales','trades','copies','markets'];
+  document.querySelectorAll('.nav-tab').forEach((t,i)=>t.classList.toggle('active',ids[i]===id));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+}
+
+function scoreBar(score) {
+  const pct = Math.min(100,(score||0)*100);
+  const col  = score>=0.6?'var(--green)':score>=0.4?'var(--accent)':'var(--yellow)';
+  return `<div class="score-wrap">
+    <div class="score-bar"><div class="score-fill" style="width:${pct}%;background:${col}"></div></div>
+    <span class="score-num" style="color:${col}">${f2(score)}</span>
+  </div>`;
+}
+
+function fmtM(n) {
+  n=parseFloat(n)||0;
+  if(Math.abs(n)>=1e6) return (n/1e6).toFixed(1)+'M';
+  if(Math.abs(n)>=1e3) return (n/1e3).toFixed(1)+'K';
+  return n.toFixed(0);
+}
+function fmtN(n){return (n||0).toLocaleString()}
+function fmtT(ts, short=false) {
+  if(!ts) return '—';
+  const d=new Date(ts*1000);
+  return short
+    ? d.toLocaleDateString('vi-VN',{month:'short',day:'numeric'})
+    : d.toLocaleDateString('vi-VN')+' '+d.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+}
+function sa(addr, pfx='') {
+  if(!addr) return pfx||'—';
+  return addr.slice(0,6)+'...'+addr.slice(-4);
+}
+function f1(n){return (parseFloat(n)||0).toFixed(1)}
+function f2(n){return (parseFloat(n)||0).toFixed(2)}
+function f3(n){return (parseFloat(n)||0).toFixed(3)}
+function f4(n){return (parseFloat(n)||0).toFixed(4)}
+function emptyRow(cols){return `<tr><td colspan="${cols}" class="empty">Không có dữ liệu</td></tr>`}
+function showLoading(tbodyId, cols) {
+  document.getElementById(tbodyId).innerHTML =
+    `<tr><td colspan="${cols}"><div class="loading"><div class="spin"></div>Đang tải...</div></td></tr>`;
+}
+function showToast(msg) {
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+let _timers={};
+function debounce(fn, ms) {
+  return function(...args) {
+    clearTimeout(_timers[fn]);
+    _timers[fn]=setTimeout(()=>fn(...args),ms);
+  };
+}
+
+// ── Lọc Trade History theo wallet ──────────────────────────────────────────
+// Được gọi khi nhấn nút "Trades" trong tab Whale Wallets
+// 1. Chuyển sang tab Trade History
+// 2. Điền địa chỉ vào search box
+// 3. Load trades của ví đó
+// 4. Hiện banner thông báo đang lọc
+function filterTradesByWallet(addr) {
+  // Chuyển tab
+  tab('trades');
+
+  // Điền vào search box
+  document.getElementById('tSearch').value = addr;
+  document.getElementById('tSource').value  = '';
+  document.getElementById('tOutcome').value = '';
+
+  // Hiện banner
+  document.getElementById('tradeBanner').style.display = 'flex';
+  document.getElementById('tradeBanner').className = 'filter-banner';
+  document.getElementById('tradeBanner').innerHTML = `
+    <span>🔍 Đang lọc trades của:</span>
+    <b>${addr}</b>
+    <button class="clear-btn" onclick="clearTradeFilter()">✕ Xóa lọc</button>
+  `;
+
+  // Load trades
+  loadTrades();
+}
+
+function clearTradeFilter() {
+  document.getElementById('tSearch').value = '';
+  document.getElementById('tradeBanner').style.display = 'none';
+  loadTrades();
+}
+
+// ── Copy địa chỉ vào clipboard ─────────────────────────────────────────────
+function copyAddr(addr) {
+  navigator.clipboard.writeText(addr).then(()=>{
+    showToast('✓ Đã copy: ' + addr.slice(0,10)+'...');
+  }).catch(()=>{
+    // Fallback nếu clipboard API không hoạt động
+    const el = document.createElement('textarea');
+    el.value = addr;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    showToast('✓ Đã copy địa chỉ');
+  });
+}
+</script>
+</body>
+</html>
