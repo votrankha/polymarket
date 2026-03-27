@@ -50,6 +50,7 @@ Ngưỡng:
   Đây là algo trade không thể replicable bằng tay — không nên copy.
 - avg size < $5 với > 200 trades/tháng → micro spam / wash trading [bot_micro]
 - >60% trades có entry price > $0.90 → BOND_TRADER (không copy vì chỉ là risk-free yield, không có directional insight) [bond_trader]
+- **>80% trades có entry price > $0.90 → HIGH_CONFIDENCE_BIAS (chỉ trade when almost certain, không phải skill thật) [high_conf_bias]**
 
 ### FAIL — Loại suspicious (cần thận trọng):
 - Tài khoản mới < 10 trades nhưng size > $5,000 → suspicious

@@ -47,6 +47,11 @@ def evaluate(stats: dict) -> tuple:
         return False, "hf"
     if market_count < 3:
         return False, "few_markets"
+    
+    # High-confidence bias check (sure bet only)
+    high_conf_ratio = stats.get('high_price_entry_ratio', 0)
+    if high_conf_ratio > 0.8:
+        return False, "high_conf_bias"
 
     # Specialist check (passes all above + specialist criteria)
     is_specialist = all([
