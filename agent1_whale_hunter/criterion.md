@@ -29,8 +29,8 @@ Ngưỡng:
 ## 2. Điều kiện cơ bản để qualify (PASS/FAIL)
 
 ### PASS — đủ điều kiện theo dõi:
-- Win rate > 55% (tính trên tối thiểu **5** thị trường đã resolve)
-  Lý do: 5 markets đủ để đánh giá win rate, cho phép pool lớn hơn.
+- Win rate > 55% (tính trên tối thiểu **3** thị trường đã resolve)
+  Lý do: 3 markets đủ để đánh giá win rate, mở rộng pool specialist.
 - Lịch sử > **3 tháng** (first trade cách hiện tại > **90 ngày**)
   Lý do: Track record đủ dài nhưng không quá restrictive.
 - Số trades/tháng ≤ **150**

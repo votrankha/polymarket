@@ -39,13 +39,13 @@ def evaluate(stats: dict) -> tuple:
     # Basic PASS thresholds
     if wr < 55.0:
         return False, f"low_wr:{wr:.1f}%"
-    if total_closed < 5:
+    if total_closed < 3:
         return False, "few_closed"
     if account_age < 90:
         return False, f"too_new:{account_age}d"
     if trades_per_month > 150:
         return False, "hf"
-    if market_count < 5:
+    if market_count < 3:
         return False, "few_markets"
 
     # Specialist check (passes all above + specialist criteria)

@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Win rate: `>60%` → `>55%`
   - Minimum closed markets: `10` → `5`
   - Account age: `>4 months` → `>3 months`
+  - **markets_count threshold: `≥5` → `≥3`** (2026-03-27, to include high-quality 3-4 market specialists from Mina's monitor list)
   - Specialist criteria:
     - avg_size: `$50k` → `$20k`
     - total_volume: `$500k` → `$200k`
