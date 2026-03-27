@@ -34,8 +34,8 @@ Ngưỡng:
 - Lịch sử > **3 tháng** (first trade cách hiện tại > **90 ngày**)
   Lý do: Track record đủ dài nhưng không quá restrictive.
 - Số trades/tháng ≤ **150**
-- **Số closed positions tối thiểu ≥ 20**
-  Lý do: Cần đủ dữ liệu để win rate và Kelly đáng tin, tránh false positive.
+- **Số closed positions tối thiểu ≥ 5**
+  Lý do: Đủ để tính win rate/Kelly có ý nghĩa, tránh false positive từ 0 positions.
 - Tổng số thị trường đã tham gia ≥ **3**
 
 ### FAIL — Loại bot (không copy bot):
