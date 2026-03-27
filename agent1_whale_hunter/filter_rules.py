@@ -39,7 +39,7 @@ def evaluate(stats: dict) -> tuple:
     # Basic PASS thresholds
     if wr < 55.0:
         return False, f"low_wr:{wr:.1f}%"
-    if total_closed < 3:
+    if total_closed < 20:
         return False, "few_closed"
     if account_age < 90:
         return False, f"too_new:{account_age}d"
