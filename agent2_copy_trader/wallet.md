@@ -75,7 +75,7 @@ SCAN_INTERVAL_SECONDS=30
 
 
 ## Active Wallets
-# [Agent1 auto-update] 2026-03-27 03:00 UTC  (115 wallets)
+# [Agent1 auto-update] 2026-03-27 09:30 UTC  (115 wallets)
 0x31a53df5265bc4717ab01c7a7d4b97677d339d41 | 50 | all | score=0.83 kelly=0.891 wr=90.5%
 0x31a53df5265bc4717ab01c7a7d4b97677d339d41 | 50 | all | score=0.83 kelly=0.891 wr=90.5%
 0xa8caf30a6a9c6e670f5602827f4e435d1d4cd535 | 50 | all | score=0.80 kelly=0.647 wr=86.7%
